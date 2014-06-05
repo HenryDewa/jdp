@@ -1,0 +1,74 @@
+/* Custom CSS by Kenold Beauplan
+* Twitter @kenoldb
+*/
+
+h3 {
+	/*color: #bbb; */
+	margin-bottom: 20px;
+}
+
+.navbar-default { background-color: #398ab9; }
+
+.navbar-default .navbar-brand { color: #FFF; }
+.navbar-default .navbar-brand:hover{ color: #FFF; }
+
+.navbar-default .navbar-nav>li>a { color: #FFF; }
+
+.navbar-default .navbar-nav>li>a:hover { color: #000; background-color: #daeaf4;}
+
+#footer {
+	background-color: #222;
+}
+
+ul { list-style: none; margin:  0; padding: 0; }
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+/*add some makeup*/
+.carousel .carousel-control {
+    background: none;
+    border: none;
+}
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.bg-success { padding: 10px; border: 1px solid #BBB;}
+
+.submit{
+  background:none;
+  border:none;
+  font-size:1em;
+  color:#428bca;
+}
+
+.col-sm-1 { padding: 0; }
+
+.field-title { 
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+  float: left;
+  width: 90px; 
+}
+
+.cross { text-decoration: line-through; }
+
+.online { color: #FFF; background-color: #43c83c; padding: 4px; }
+.offline { color: #FFF; background-color: #fa3031; padding: 4px; }
+
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.alert { padding: 8px;}
