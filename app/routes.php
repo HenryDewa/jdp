@@ -97,18 +97,24 @@ Route::controller('user', 'UserController');
 Route::when('contact-us','detectLang');
 
 # Contact Us Static Page
-Route::get('contact-us', function()
+Route::get('contact', array('as' => 'contact', function()
 {
     // Return about us page
-    return View::make('site/contact-us');
-});
+    return View::make('site.contact');
+}));
+
+# About Us Static Page
+Route::get('about', array('as' => 'about', function() {
+	return View::make('site.about');
+}));
 
 
 # Posts - Second to last set, match slug
 Route::get('{postSlug}', 'BlogController@getView');
 Route::post('{postSlug}', 'BlogController@postView');
 
-# Index Page - Last route, no matches
-Route::get('/', array('before' => 'detectLang','uses' => 'MoviesController@index'));
+# FOR TESTING: 
+Route::get('/', 'MoviesController@getIndex');
 
-Route::resource('movies', 'MoviesController');
+# NOT WORKING
+Route::get('movies', 'MoviesController@getIndex');
