@@ -7,14 +7,13 @@ class MoviesController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getIndex()
 	{
         $movies = Movie::with('ratings')
             ->orderBy('updated_at', 'DESC')
             ->paginate(10);
 
-		return View::make('site.movies.index')
-			->with('title', 'All Movies')
+		return View::make('site/movies/index')
 			->with('movies', $movies);
 	}
 
